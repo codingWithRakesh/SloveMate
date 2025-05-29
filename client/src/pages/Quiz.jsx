@@ -21,7 +21,10 @@ const Quiz = () => {
   //   document.documentElement.classList.add('dark');
   // }, []);
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
   const generateQuiz = async () => {
     if (!promptData.trim()) return;
 
@@ -55,7 +58,11 @@ const Quiz = () => {
       const jsonStart = responseText.indexOf('[');
       const jsonEnd = responseText.lastIndexOf(']') + 1;
       const jsonString = responseText.slice(jsonStart, jsonEnd);
+<<<<<<< HEAD
       
+=======
+
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
       const parsedQuizzes = JSON.parse(jsonString);
       setQuizzes(parsedQuizzes);
       setCurrentQuestion(0);
@@ -70,10 +77,18 @@ const Quiz = () => {
   };
 
   useEffect(() => {
+<<<<<<< HEAD
     generateQuiz();
   }, [promptData]);
 
 
+=======
+    if (promptData && promptData.trim()) {
+      generateQuiz();
+    }
+  }, [promptData]);
+
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
   const handleOptionSelect = (option) => {
     setSelectedOption(option);
   };
@@ -82,19 +97,38 @@ const Quiz = () => {
     if (selectedOption === quizzes[currentQuestion].answer) {
       setScore(score + 1);
     }
+<<<<<<< HEAD
     
     setSelectedOption(null);
     
+=======
+
+    setSelectedOption(null);
+
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
     if (currentQuestion < quizzes.length - 1) {
       setCurrentQuestion(currentQuestion + 1);
     } else {
       setQuizCompleted(true);
     }
+<<<<<<< HEAD
   };
 
   return (
     <div className="min-h-screen ">
       <main className=" mx-auto mt-[5rem] px-4 py-8">
+=======
+  };
+
+  const handleCreateNewQuiz = () => {
+    setLoading(true);
+    generateQuiz();
+  };
+
+  return (
+    <div className="min-h-screen">
+      <div className="mx-auto mt-[5rem] px-4 py-8">
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
         {quizzes.length === 0 ? (
           <div className="max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-xl shadow-md p-6">
             <h2 className="text-2xl font-bold mb-6 text-center">Generate Your Quiz</h2>
@@ -140,6 +174,7 @@ const Quiz = () => {
               </p>
             </div>
             <button
+<<<<<<< HEAD
               onClick={generateQuiz}
               className="px-6 py-3 cursor-pointer bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-800 text-white rounded-lg font-medium transition-colors"
             >
@@ -154,6 +189,22 @@ const Quiz = () => {
                 ) : (
                   'Create New Quiz'
                 )}
+=======
+              onClick={handleCreateNewQuiz}
+              className="px-6 py-3 cursor-pointer bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-700 dark:hover:bg-indigo-800 text-white rounded-lg font-medium transition-colors"
+            >
+              {loading ? (
+                <span className="flex items-center justify-center">
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Generating...
+                </span>
+              ) : (
+                'Create New Quiz'
+              )}
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
             </button>
           </div>
         ) : (
@@ -167,11 +218,19 @@ const Quiz = () => {
                   Score: <span className="text-indigo-600 dark:text-indigo-400">{score}</span>
                 </span>
               </div>
+<<<<<<< HEAD
               
               <h3 className="text-xl font-semibold mb-6 dark:text-white">
                 {quizzes[currentQuestion].question}
               </h3>
               
+=======
+
+              <h3 className="text-xl font-semibold mb-6 dark:text-white">
+                {quizzes[currentQuestion].question}
+              </h3>
+
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
               <div className="space-y-3 mb-8">
                 {quizzes[currentQuestion].options.map((option, index) => (
                   <button
@@ -187,7 +246,11 @@ const Quiz = () => {
                   </button>
                 ))}
               </div>
+<<<<<<< HEAD
               
+=======
+
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
               <button
                 onClick={handleNextQuestion}
                 disabled={!selectedOption}
@@ -202,7 +265,11 @@ const Quiz = () => {
             </div>
           </div>
         )}
+<<<<<<< HEAD
       </main>
+=======
+      </div>
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
     </div>
   );
 }

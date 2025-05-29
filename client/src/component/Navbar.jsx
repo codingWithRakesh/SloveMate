@@ -56,7 +56,13 @@ const Navbar = () => {
                             <li>
                                 <NavLink to="/" className="block py-2 px-3 text-white rounded-sm md:bg-transparent md:p-0" >Home</NavLink>
                             </li>
+<<<<<<< HEAD
                             
+=======
+                            {/* <li>
+                                <NavLink to="/quiz" className="block py-2 px-3 rounded-sm md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 :hover:text-white md:hover:bg-transparent border-gray-700">Quiz</NavLink>
+                            </li> */}
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
                             <li>
                                 <NavLink to="/problemsolving" className="block py-2 px-3 rounded-sm md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 :hover:text-white md:hover:bg-transparent border-gray-700">Problem Solver</NavLink>
                             </li>

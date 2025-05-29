@@ -11,7 +11,6 @@ import Quiz from './pages/Quiz.jsx'
 import ProblemSolver from './pages/ProblemSolver.jsx'
 import UserContextProvider from './contexts/showUser.context.jsx'
 import UserHistory from './pages/UserHistory.jsx'
-import PromptDataProvider from './contexts/promptDataContext.jsx'
 
 const router = createBrowserRouter([
   {

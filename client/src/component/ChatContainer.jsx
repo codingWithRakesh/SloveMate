@@ -8,9 +8,15 @@ import { PiSpeakerHighFill } from "react-icons/pi";
 import { FaVolumeMute } from "react-icons/fa";
 import Speech from 'react-speech';
 import { handleError } from '../component/ErrorMessage.jsx';
+<<<<<<< HEAD
 import { NavLink, useNavigate } from 'react-router';
 import { usePromptData } from '../contexts/promptDataContext.jsx';
 
+=======
+import { useNavigate } from 'react-router';
+import { usePromptData } from '../contexts/promptDataContext.jsx';
+import { NavLink } from 'react-router';
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
 const ChatContainer = () => {
     const [loder, setLoder] = useState(false)
     const [valueText, setValueText] = useState('')
@@ -136,12 +142,23 @@ const ChatContainer = () => {
                     </div>
                     <NavLink className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 flex items-center justify-center" to="/quiz">Take Quiz</NavLink>
                 </div> : ""}</div></div>}
+<<<<<<< HEAD
 
             </div>
             <div></div>
+=======
+
+            </div>
+            <div>
+
+
+
+            </div>
+>>>>>>> 7a51c608d83a5e07cc2b58bb1feaed23e95a564b
 
         </div>
     )
 }
 
 export default ChatContainer
+
